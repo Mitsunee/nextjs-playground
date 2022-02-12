@@ -7,6 +7,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Card from "../lib/Card";
 
+export const config = {
+  unstable_includeFiles: ["public/**/*.(ico|svg)"]
+};
+
 export default function Home({ myProp, cwd, time }) {
   const [timeString, setTimeString] = useState("at ?");
 
