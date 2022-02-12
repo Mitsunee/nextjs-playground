@@ -8,7 +8,7 @@ import styles from "../styles/Home.module.css";
 import Card from "../lib/Card";
 
 export const config = {
-  unstable_includeFiles: ["public/**/*.(ico|svg)"]
+  unstable_includeFiles: ["public/**/*.*(ico|svg)"]
 };
 
 export default function Home({ myProp, cwd, time }) {
