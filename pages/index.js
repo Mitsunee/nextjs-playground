@@ -109,14 +109,14 @@ export default function ColorPage({ current, wasDefault, builtAt }) {
 }
 
 export const config = {
-  unstable_includeFiles: ["stuff/savedColor.txt"]
+  unstable_includeFiles: ["savedColor.txt"]
 };
 
 export async function getStaticProps() {
   let current;
   let wasDefault = false;
 
-  current = await readFile("stuff/savedColor.txt");
+  current = await readFile("savedColor.txt");
 
   if (!current) {
     current = "#000000";

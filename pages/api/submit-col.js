@@ -13,7 +13,7 @@ export default async function handler(req, res) {
 
   try {
     if (isCol(submittedColor)) {
-      await writeFile("stuff/savedColor.txt", submittedColor, "utf8");
+      await writeFile("savedColor.txt", submittedColor, "utf8");
       res.status(200).json({ accepted: true, color: submittedColor });
     } else {
       res.status(400).end(`Bad Request`);
@@ -25,5 +25,5 @@ export default async function handler(req, res) {
 }
 
 export const config = {
-  unstable_includeFiles: ["stuff/savedColor.txt"]
+  unstable_includeFiles: ["savedColor.txt"]
 };
